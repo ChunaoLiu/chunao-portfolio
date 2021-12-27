@@ -9,7 +9,7 @@ export default function Topbar({ menuOpen, setMenuOpen, lightOn, setLightOn }) {
         <div className={"topbar " + (lightOn && "light") + " " + (menuOpen && "active")}>
             <div className="wrapper">
                 <div className="left">
-                    <a href="#intro" className="logo">intro</a>
+                    <a href="#intro" className="logo">Chunao Liu</a>
                     <div className="itemContainer">
                         <Person className="icon"/>
                         <span>
