@@ -1,3 +1,105 @@
 .works{
-    background-color: lightgreen;
+
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+
+    .vertical-timeline{
+        flex: 0.8;
+        .vertical-timeline-element--work {
+            .vertical-timeline-element-content {
+                overflow-x: initial;
+            }
+            overflow-x: initial;
+        }
+    }
+
+    .uppertitle{
+        flex: 0.2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all 1s ease;
+
+        .h2-title{
+            font-size: 28px;
+        }
+
+        .h2-subtitle{
+            color: grey;
+            font-size: 20px;
+        }
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
+      
+    .github-corner svg {
+        z-index: 1000;
+    }
+
+    .vertical-timeline-element--work {
+        .vertical-timeline-element-content {
+            color: black;
+        }
+
+        .vertical-timeline-element-date {
+            color: #333;
+        }
+    }
+      
+    .vertical-timeline-element--work .vertical-timeline-element-content {
+        border-top: 3px solid #2196f3;
+    }
+    
+    .vertical-timeline-element--education .vertical-timeline-element-content {
+        border-top: 3px solid #e91e63;
+    }
+    
+    /* CUSTOM LINE COLOR */
+    /* The line */
+    .vertical-timeline.vertical-timeline-custom-line::before {
+    background: #424242;
+    }
+    
+    /* Icon container's border */
+    .vertical-timeline.vertical-timeline-custom-line .vertical-timeline-element--work .vertical-timeline-element-icon {
+    box-shadow: 0 0 0 4px #1976d2, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .vertical-timeline.vertical-timeline-custom-line .vertical-timeline-element--education .vertical-timeline-element-icon {
+    box-shadow: 0 0 0 4px #c2185b, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+    }
+z
+    .vertical-timeline-element-icon.vertical-timeline-element-icon--button {
+    box-shadow: none;
+    }
+    
+    .vertical-timeline-element-icon.vertical-timeline-element-icon--button .fab-button {
+    width: 40px;
+    height: 40px;
+    }
+    
+    @media only screen and (min-width: 1170px) {
+    .vertical-timeline-element-icon.vertical-timeline-element-icon--button .fab-button {
+        width: 60px;
+        height: 60px;
+    }
+    }
+    
+    .vertical-timeline-element-icon.vertical-timeline-element-icon--button svg {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    left: auto;
+    top: auto;
+    margin-left: auto;
+    margin-top: auto;
+    }
 }
