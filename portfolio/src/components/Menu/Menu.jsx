@@ -11,13 +11,16 @@ export default function Menu({ menuOpen, setMenuOpen, lightOn, setLightOn }) {
                     <a href="#intro" onClick={MenuRev}>Home</a>
                 </li>
                 <li>
+                    <a href="#AboutMe" onClick={MenuRev}>About Me</a>
+                </li>
+                <li>
+                    <a href="#Skills" onClick={MenuRev}>My Skills</a>
+                </li>
+                <li>
+                    <a href="#works" onClick={MenuRev}>Work & Education</a>
+                </li>
+                <li>
                     <a href="#portfolio" onClick={MenuRev}>Portfolio</a>
-                </li>
-                <li>
-                    <a href="#works" onClick={MenuRev}>Works</a>
-                </li>
-                <li>
-                    <a href="#testimonials" onClick={MenuRev}>Testimonials</a>
                 </li>
                 <li>
                     <a href="#contact" onClick={MenuRev}>Contact</a>

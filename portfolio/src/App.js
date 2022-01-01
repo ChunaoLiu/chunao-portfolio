@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import Topbar from "./components/topbar/Topbar"
 import Intro from "./components/intro/Intro"
 import Portfolio from "./components/portfolio/Portfolio"
 import Works from "./components/works/Works"
-import Testimonials from "./components/testimonals/Testimonials"
+import AboutMe from "./components/AboutMe/AboutMe"
 import Contact from "./components/contact/Contact"
 import Menu from "./components/Menu/Menu"
+import Skills from "./components/Skills/Skills"
 import "./app.scss"
 import { useState } from "react";
 
@@ -18,9 +18,10 @@ function App() {
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} lightOn={lightOn} setLightOn={setLightOn}/>
       <div className='section'>
         <Intro/>
-        <Portfolio/>
+        <AboutMe/>
+        <Skills/>
         <Works/>
-        <Testimonials/>
+        <Portfolio/>
         <Contact/>
       </div>
     </div>

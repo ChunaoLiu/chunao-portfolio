@@ -1,0 +1,131 @@
+.AboutMe{ 
+    background-color: white;
+    display: flex;
+    align-self: center;
+    left: auto;
+    right: auto;
+    .doublePhoto, .doublePhoto-hide{
+        transition: all 1s ease;
+        flex: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+
+        .BGPhoto{
+            transition: all 0.2s ease;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+            background-color: #333;
+            width: 60%;
+            height: 70vh;
+            border-radius: 30px;
+        }
+
+        .ActualPhoto{
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+            width: 60%;
+            height: 70vh;
+            top: 0px;
+            right: 0px;
+            border-radius: 30px;
+
+            .image{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &:hover{
+            .BGPhoto{
+                transition: all 0.2s ease;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                background-color: #333;
+                width: 60%;
+                height: 70vh;
+                border-radius: 30px;
+            }
+    
+            .ActualPhoto{
+                transition: all 0.2s ease;
+                position: relative;
+                overflow: hidden;
+                width: 60%;
+                height: 70vh;
+                top: 25px;
+                right: -25px;
+                border-radius: 30px;
+    
+                .image{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .doublePhoto{
+        opacity: 100%;
+        left: 0px;
+    }
+    
+    .doublePhoto-hide{
+        opacity: 0%;
+        left: -500px;
+    }
+
+    .MeDoc, .MeDoc-hide{
+        transition: all 1s ease;
+        margin-right: 120px;
+        flex: 0.5;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .h1-title{
+            font-size: 50px;
+            margin-bottom: 100px;
+        }
+    
+        .q-MotivationWords{
+            text-align: center;
+            font-size: 35px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .p-para1{
+            line-height: 2;
+            text-indent: 20px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .p-para2{
+            line-height: 2;
+            text-indent: 20px;
+            text-indent: 20px;
+            font-size: 20px;
+        }
+    }
+
+    .MeDoc {
+        right: 0px;
+        opacity: 100%;
+    }
+
+    .MeDoc-hide{
+        right: -500px;
+        opacity: 0%;
+    }
+}

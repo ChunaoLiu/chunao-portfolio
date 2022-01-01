@@ -12,6 +12,12 @@
             }
             overflow-x: initial;
         }
+        .vertical-timeline-element--education {
+            .vertical-timeline-element-content {
+                overflow-x: initial;
+            }
+            overflow-x: initial;
+        }
     }
 
     .uppertitle{
@@ -44,6 +50,16 @@
     }
 
     .vertical-timeline-element--work {
+        .vertical-timeline-element-content {
+            color: black;
+        }
+
+        .vertical-timeline-element-date {
+            color: #333;
+        }
+    }
+
+    .vertical-timeline-element--education {
         .vertical-timeline-element-content {
             color: black;
         }

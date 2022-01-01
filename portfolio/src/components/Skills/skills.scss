@@ -1,0 +1,75 @@
+.skills{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+    .section-counters h4 {
+        color: #fff;
+        margin: 25px 0 0;
+    }
+    
+    .site-section p.counter {
+        font-size: 100px;
+        font-weight: 300;
+        color: #fff;
+        margin: 0;
+        line-height: 0.8;
+    }
+    
+    .site-section {
+        padding-top: 120px;
+     }
+     
+     .site-section h2,
+     .site-section h3 {
+         font-size: 36px;
+         margin: 0;
+         text-transform: uppercase;
+     }
+
+     .section-skills,
+	.section-portfolio,
+	.section-form {
+	    padding-bottom: 90px;
+	}
+
+    .section-skills .col-md-4 + .col-md-4,
+	.skill + .skill {
+		margin-top: 20px;
+	}
+
+     .site-footer .row {
+		display:flex;
+		flex-direction: column-reverse;	
+	}
+
+    .site-section p.counter {
+		font-size: 80px;
+	}
+
+     .section-skills {
+        padding-bottom: 120px;
+    }
+
+    .skill + .skill {
+        margin-top: 50px;
+    }
+    
+    .skill h4 {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin: 0 0 15px;
+    }
+    
+    .progress {
+        height: 15px;
+        margin-bottom: 0;
+        border-radius: 0;
+        background-color: #dfdfdf;
+        box-shadow: none;
+    }
+
+    .progress-bar {
+        background-color: #212121;  
+    }
+}

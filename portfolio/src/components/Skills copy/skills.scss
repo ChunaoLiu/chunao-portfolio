@@ -1,0 +1,56 @@
+.skills{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    
+    .title-block{
+        flex: 0.1;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .chart-title{
+            text-align: center;
+        }
+    }
+
+    .charts{
+        flex: 0.9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .chart1{
+            flex:0.5;
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            
+            .chartCanvas{
+                margin-left: 50px;
+                margin-right: 50px;
+                width: 500px;
+                height: 100%;
+            }
+
+            .chartCanvas-cloud{
+                margin-left: 50px;
+                margin-right: 50px;
+                width: 300px;
+                height: 100%;
+            }
+        }
+
+        .chart2{
+            flex: 0.5;
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            
+        }
+    }
+}
