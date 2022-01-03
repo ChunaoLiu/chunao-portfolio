@@ -1,115 +1,95 @@
 import "./skills.scss"
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-  } from 'chart.js';
-import { Bar } from 'react-chartjs-2';
-import { LanguageSkillData, FrameworkAndTools, Cloud, options_Cloud, options_Framework, options_Language } from "../../data";
 import React from 'react'
+import { useEffect, useState } from "react"
+import VisibilitySensor from 'react-visibility-sensor';
+import { ProgressBar } from 'react-bootstrap';
 
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-);
+export default function Skills() { 
 
-const options_bar = {
-    maintainAspectRatio: false,
-    responsive: true,
-    dynamicDisplay : true,
-    scales: {
-        y: {
-            min: 0,
-            max: 10,
-            ticks: {
-                stepSize: 2
-            }
+    const [visible, setVisible] = useState(false);
+
+    function onChange (isVisible) {
+        if (isVisible) {
+            console.log("ProgressBar is now visible!");
+            setVisible(visible);
+            document.getElementById("C/C++").firstChild.style.width = '100%';
+            document.getElementById("Javascript").firstChild.style.width = '70%';
+            document.getElementById("Java").firstChild.style.width = '90%';
+            document.getElementById("HTML/CSS").firstChild.style.width = '80%';
+            document.getElementById("Python").firstChild.style.width = '90%';
+            document.getElementById("Swift").firstChild.style.width = '60%';
+            document.getElementById("C/C++").firstChild.style.width = '100%';
         }
-    },
-    animation: {
-        duration: 3000,
-        easing: "easeInBounce",
-      },
-    plugins: {
-        legend: {
-        position: 'top',
-        },
-        title: {
-        display: true,
-        text: 'Chart.js Bar Chart',
-        },
-        deferred: {
-            xOffset: 150,
-            yOffset: '50%',
-            delay: 500
-        }
-    },
-};
-
-export default function Skills() {
+    };
 
     return (
+        <VisibilitySensor 
+        onChange={onChange}
+        partialVisibility={'bottom'}
+        offset={{bottom:-600}}
+        intervalCheck={true}>
         <div className="skills" id="Skills">
             <section className="site-section section-skills">
-            <div className="container">
+                <div className="container">
+                    <div className="text-center">
+                        <h3>My Skills</h3>
+                        <img src="assets/lines.svg" className="img-lines" alt="lines"></img>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-4">
+                            <div className="skill">
+                                <h4>C/C++</h4>
+                                <ProgressBar id="C/C++" animated={true} now={0}/>
+                            </div>
+                            <div className="skill">
+                                <h4>JavaScript</h4>
+                                <ProgressBar id="Javascript" animated={true} now={0}/>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="skill">
+                                <h4>Java</h4>
+                                <ProgressBar id="Java" animated={true} now={0}/>
+                            </div>
+                            <div className="skill">
+                                <h4>HTML/CSS</h4>
+                                <ProgressBar id="HTML/CSS" animated={true} now={0}/>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="skill">
+                                <h4>Python</h4>
+                                <ProgressBar id="Python" animated={true} now={0}/>
+                            </div>
+                            <div className="skill">
+                                <h4>Swift</h4>
+                                <ProgressBar id="Swift" animated={true} now={0}/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div className="bottomcontainer">
                 <div className="text-center">
-                    <h3>My Skills</h3>
+                    <h3>I can help you with</h3>
                     <img src="assets/lines.svg" className="img-lines" alt="lines"></img>
                 </div>
-                <div className="row">
-                    <div className="col-md-4">
-                        <div className="skill">
-                            <h4>Html/css</h4>
-                            <div className="progress">
-                                <div className="progress-bar" role="progressbar" data-transitiongoal="100"></div>
-                            </div>
-                        </div>
-                        <div className="skill">
-                            <h4>Python</h4>
-                            <div className="progress">
-                                <div className="progress-bar" role="progressbar" data-transitiongoal="75"></div>
-                            </div>
-                        </div>
+                <div className="moreskill">
+                    <div className="gifcontainer-frontend">
+                        <h3 className="words">Front-end design and implementation</h3>
+                        <img className="gif" src="/assets/front-end.gif" alt=""/>
                     </div>
-                    <div className="col-md-4">
-                        <div className="skill">
-                            <h4>Javascript</h4>
-                            <div className="progress">
-                                <div className="progress-bar" role="progressbar" data-transitiongoal="82"></div>
-                            </div>
-                        </div>
-                        <div className="skill">
-                            <h4>Ruby</h4>
-                            <div className="progress">
-                                <div className="progress-bar" role="progressbar" data-transitiongoal="66"></div>
-                            </div>
-                        </div>
+                    <div className="gifcontainer">
+                    <h3 className="words">Back-end networking and Database design</h3>
+                        <img className="gif" src="/assets/back-end.gif" alt=""/>
                     </div>
-                    <div className="col-md-4">
-                        <div className="skill">
-                            <h4>Php</h4>
-                            <div className="progress">
-                                <div className="progress-bar" role="progressbar" data-transitiongoal="97"></div>
-                            </div>
-                        </div>
-                        <div className="skill">
-                            <h4>Java</h4>
-                            <div className="progress">
-                                <div className="progress-bar" role="progressbar" data-transitiongoal="45"></div>
-                            </div>
-                        </div>
+                    <div className="gifcontainer-backend">
+                        <h3 className="words">DevOps CI/CD and Cloud Solution</h3>
+                        <img className="gif" src="/assets/cloud.gif" alt=""/>
                     </div>
                 </div>
             </div>
-        </section>
         </div>
+        </VisibilitySensor>
     )
 }

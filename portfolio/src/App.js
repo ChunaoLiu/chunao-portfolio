@@ -8,6 +8,10 @@ import Menu from "./components/Menu/Menu"
 import Skills from "./components/Skills/Skills"
 import "./app.scss"
 import { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+import 'jquery/dist/jquery.slim.min.js'
+import 'popper.js/dist/popper.min.js'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
