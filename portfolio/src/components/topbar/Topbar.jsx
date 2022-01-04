@@ -3,8 +3,12 @@ import {Person, Mail} from "@material-ui/icons"
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import ChromeReaderModeIcon from '@mui/icons-material/ChromeReaderMode';
+import { BrowserRouter, Link} from 'react-router-dom'
+import { useEffect } from "react";
 
 export default function Topbar({ menuOpen, setMenuOpen, lightOn, setLightOn }) {
+
     return (
         <div className={"topbar " + (lightOn && "light") + " " + (menuOpen && "active")}>
             <div className="wrapper">
@@ -37,6 +41,14 @@ export default function Topbar({ menuOpen, setMenuOpen, lightOn, setLightOn }) {
                             linkedin.com/in/chunao-liu-1a7a31204/
                         </span>
                         </a>
+                    </div>
+                    <div className="itemContainer">
+                            <a className="no-href" href="/assets/Chunao Renewed.pdf">
+                            <ChromeReaderModeIcon className="icon"/>
+                            <span>
+                                Download My Resume
+                            </span>
+                            </a>
                     </div>
                 </div>
                 <div className="right">

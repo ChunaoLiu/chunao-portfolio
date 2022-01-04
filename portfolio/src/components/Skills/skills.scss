@@ -1,5 +1,6 @@
 .skills{
     background-color: white;
+    overflow-y: hidden;
 
     .site-section .container {
         .text-center {
@@ -92,9 +93,11 @@
         transition: all 1s ease;
     }
 
-    .bottomcontainer {
+    .bottomcontainer, .bottomcontainer-hidden{
         display: flex;
         flex-direction: column;
+        position: relative;
+        transition: all 1s ease;
 
         .text-center {
             flex: 1;
@@ -150,6 +153,16 @@
                 margin-right: 30px;
             }
         }
+    }
+
+    .bottomcontainer {
+        opacity: 100%;
+        bottom: 0px;
+    }
+
+    .bottomcontainer-hidden{
+        opacity: 0%;
+        bottom: -50%;
     }
     
 }

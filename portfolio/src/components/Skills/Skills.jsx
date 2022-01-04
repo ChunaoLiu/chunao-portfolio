@@ -11,7 +11,7 @@ export default function Skills() {
     function onChange (isVisible) {
         if (isVisible) {
             console.log("ProgressBar is now visible!");
-            setVisible(visible);
+            setVisible(!visible);
             document.getElementById("C/C++").firstChild.style.width = '100%';
             document.getElementById("Javascript").firstChild.style.width = '70%';
             document.getElementById("Java").firstChild.style.width = '90%';
@@ -21,6 +21,12 @@ export default function Skills() {
             document.getElementById("C/C++").firstChild.style.width = '100%';
         }
     };
+
+    useEffect(() => {
+        if (visible) {
+            setTimeout(() => {document.getElementById("bot").className = "bottomcontainer";}, 1500);
+        }
+    }, [visible])
 
     return (
         <VisibilitySensor 
@@ -69,7 +75,7 @@ export default function Skills() {
                     </div>
                 </div>
             </section>
-            <div className="bottomcontainer">
+            <div id="bot" className="bottomcontainer-hidden">
                 <div className="text-center">
                     <h3>I can help you with</h3>
                     <img src="assets/lines.svg" className="img-lines" alt="lines"></img>

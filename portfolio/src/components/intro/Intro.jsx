@@ -33,7 +33,7 @@ export default function Intro() {
                 </div>
             </div>
             <div className="lower">
-                <a href="#portfolio"><img id="down-arrow" className="image" src="assets/down_arrow_ccexpress.png" alt="" onLoad={DelayedShow()}/></a>
+                <a href="#AboutMe"><img id="down-arrow" className="image" src="assets/down_arrow_ccexpress.png" alt="" onLoad={DelayedShow()}/></a>
             </div>
         </div>
     )
